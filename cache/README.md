@@ -10,3 +10,9 @@ lock时会使用lua脚本get指定的key，有三种状态
 在trylock方法中，使用setNX尝试拿到key/val，不一定成功
 实际上，只要设置key/val成功，就能拿到lock
 lock包含：key、val、超时时间等信息
+
+关于单元测试
+单元测试不依赖第三方。理论上只使用gomock进行单元测试，在集成测试时再使用第三方工具测试
+gomock使用方法：
+使用命令mock一个文件
+mockgen -package=mocks -destination=mocks/redis_cmdable.mock.go github.com/go-redis/redis/v9 Cmdable

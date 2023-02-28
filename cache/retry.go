@@ -18,5 +18,6 @@ func (f *FixedIntervalRetryStrategy) Next() (time.Duration, bool) {
 	if f.cnt >= f.MaxCnt {
 		return 0, false
 	}
+	f.cnt++
 	return f.Interval, true
 }

@@ -7,11 +7,11 @@ import (
 var (
 
 	//go:embed unlock.lua
-	luaUnlock string
+	LuaUnlock string
 
 	//go:embed refresh.lua
-	luaRefresh string
+	LuaRefresh string
 
 	//go:embed lock.lua
-	luaLock string
+	LuaLock string
 )
