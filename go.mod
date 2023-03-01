@@ -6,6 +6,7 @@ require (
 	github.com/go-redis/redis/v9 v9.0.0-rc.2
 	github.com/golang/mock v1.4.4
 	github.com/google/uuid v1.3.0
+	github.com/gotomicro/ekit v0.0.6
 	github.com/stretchr/testify v1.8.1
 )
 
