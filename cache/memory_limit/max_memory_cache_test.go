@@ -44,9 +44,8 @@ func TestMaxMemoryCache_Set(t *testing.T) {
 						"key1": []byte("hello"),
 					},
 				})
-				A := lru.Constructor()
-				A.Put("key1")
-				res.keys = A
+				A11 := lru.Constructor()
+				res.keys = A11
 				res.used = 5
 				return res
 			},
@@ -76,7 +75,7 @@ func TestMaxMemoryCache_Set(t *testing.T) {
 			},
 			key:      "key4",
 			val:      []byte("hello, key4"),
-			wantKeys: []string{"key4", "key2", "key3"},
+			wantKeys: []string{"key4", "key3", "key2"},
 			wantUsed: 33,
 		},
 		{

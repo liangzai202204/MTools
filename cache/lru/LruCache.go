@@ -72,8 +72,10 @@ func (l *LruCache) RemoveTail() *DLinkedNode {
 	return node
 }
 func (l *LruCache) AllKeys() (res []string) {
-	for _, key := range l.Cache {
-		res = append(res, key.Key)
+	k := l.head.next
+	for k.next != nil {
+		res = append(res, k.Key)
+		k = k.next
 	}
 	return
 }
