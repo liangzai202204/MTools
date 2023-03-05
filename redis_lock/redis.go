@@ -1,4 +1,4 @@
-package cache
+package redis_lock
 
 import (
 	"MTools/lua"
